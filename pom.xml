@@ -6,4 +6,12 @@
   <packaging>pom</packaging>
   <name>cloudack-labs</name>
   <description>parent project of cloudack labs</description>
+  
+   <repositories>
+    <repository>
+      <id>cloudera</id>
+      <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
+    </repository>
+   </repositories>
+ 	
 </project>

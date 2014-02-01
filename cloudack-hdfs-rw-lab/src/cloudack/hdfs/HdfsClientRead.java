@@ -11,7 +11,7 @@ import org.apache.hadoop.io.IOUtils;
 public class HdfsClientRead {
 	public static void main(String[] args) throws Exception {
 		if (args.length != 1) {
-			System.out.println("Usage: hi.hdfs.HdfsClientRead <hdfs_input_path>");
+			System.out.println("Usage: cloudack.hdfs.HdfsClientRead <hdfs_input_path>");
 			System.exit(1);
 		}
 		String fromHdfsFile = args[0];

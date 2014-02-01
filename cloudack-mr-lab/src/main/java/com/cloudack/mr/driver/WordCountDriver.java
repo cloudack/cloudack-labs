@@ -29,18 +29,14 @@ public class WordCountDriver {
 	 */
 	public static void main(String[] args) throws Exception {
 		Configuration conf = new Configuration();
-		//System.setProperty("HADOOP_USER_NAME", "root");
-
-
+		
 		Job job = new Job(conf, "wordcount");
 
-		job.setJarByClass(WordCountDriver.class);
+		job.setJarByClass(WordCountMapper.class);
 
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(IntWritable.class);
 		
-		//job.setCombinerClass(WordCountReducer.class);
-
 		job.setMapperClass(WordCountMapper.class);
 		job.setReducerClass(WordCountReducer.class);
 

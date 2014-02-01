@@ -11,7 +11,7 @@ import org.apache.hadoop.fs.Path;
 public class HdfsClientWriteAnswer {
 	public static void main(String[] args) throws Exception {
 		if (args.length != 2) {
-			System.out.println("Usage: hi.hdfs.HdfsClient <local_input_path> <hdfs_output_path>");
+			System.out.println("Usage: cloudack.hdfs.HdfsClient <local_input_path> <hdfs_output_path>");
 			System.exit(1);
 		}
 		String fromLocalFile = args[0];

@@ -29,7 +29,6 @@ public class AnagramDriver {
 		conf.setOutputValueClass(Text.class);
 
 		conf.setMapperClass(AnagramMapper.class);
-		// conf.setCombinerClass(AnagramReducer.class);
 		conf.setReducerClass(AnagramReducer.class);
 
 		conf.setInputFormat(TextInputFormat.class);
