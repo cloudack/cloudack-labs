@@ -8,5 +8,7 @@ mkdir /data/nn
 mkdir /data/dd
 chown -R vagrant:vagrant /data/nn
 chown -R vagrant:vagrant /data/dd
+cp /etc/share/vm/hosts /etc/
 service iptables stop
 chkconfig iptables off
+sudo setenforce 0
