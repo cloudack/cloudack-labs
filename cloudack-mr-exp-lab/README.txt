@@ -1,19 +1,19 @@
 Running mapreduce examples that ship with Hadoop
 
 These examples are in 'hadoop-examples-*.jar'
-On  Cloudack cluster , this jar file is in /home/vagrant/hadoop-0.20.2-cdh3u6//hadoop-examples.jar
+On  Cloudack cluster , this jar file is in /home/vagrant/hadoop-0.20.2-cdh3u6//hadoop-examples-0.20.2-cdh3u6.jar
 
 == STEP 1)
     Find what mapreduce examples are available
 
-    $ hadoop jar /home/vagrant/hadoop-0.20.2-cdh3u6//hadoop-examples.jar
+    $ hadoop jar /home/vagrant/hadoop-0.20.2-cdh3u6/hadoop-examples-0.20.2-cdh3u6.jar
 
     This will print out sample programs available
 
 
 == STEP 2) grep mapreduce
     find usage:
-    $ hadoop jar /home/vagrant/hadoop-0.20.2-cdh3u6//hadoop-examples.jar  grep
+    $ hadoop jar /home/vagrant/hadoop-0.20.2-cdh3u6//hadoop-examples-0.20.2-cdh3u6.jar grep
 
 
 == STEP 3)
@@ -28,7 +28,7 @@ On  Cloudack cluster , this jar file is in /home/vagrant/hadoop-0.20.2-cdh3u6//h
 
 == STEP 4) running grep
     to find grep usage
-        $ hadoop jar /home/vagrant/hadoop-0.20.2-cdh3u6//hadoop-examples.jar grep 
+        $ hadoop jar /home/vagrant/hadoop-0.20.2-cdh3u6//hadoop-examples-0.20.2-cdh3u6.jar grep 
 
     it will print out the usage
         first arg : input dir
@@ -37,7 +37,7 @@ On  Cloudack cluster , this jar file is in /home/vagrant/hadoop-0.20.2-cdh3u6//h
 
     now lets run the command, look for string 'dfs'
 
-        $ hadoop jar /home/vagrant/hadoop-0.20.2-cdh3u6//hadoop-examples.jar grep  <your_name>/grep/in   <your_name>/grep/out   'dfs'
+        $ hadoop jar /home/vagrant/hadoop-0.20.2-cdh3u6//hadoop-examples-0.20.2-cdh3u6.jar grep  <your_name>/grep/in   <your_name>/grep/out   'dfs'
 
     This commnad will kick off mapreduce jobs
 
