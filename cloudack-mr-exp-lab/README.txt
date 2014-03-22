@@ -20,10 +20,10 @@ On  Cloudack cluster , this jar file is in /home/vagrant/hadoop-0.20.2-cdh3u6//h
     lets copy some files into hdfs, we will use Hadoop config files
 
     prepare a directory in hdfs
-        $ hadoop dfs -mkdir <your_name>/grep/in
+        $ hadoop dfs -mkdir in
 
     copy hadoop config files from /etc/hadoop/conf  into HDFS
-        $ hadoop dfs -put /etc/hadoop/conf/*   <your_name>/grep/in
+        $ hhadoop fs -copyFromLocal /var/log/*.log in
 
 
 == STEP 4) running grep
@@ -37,7 +37,7 @@ On  Cloudack cluster , this jar file is in /home/vagrant/hadoop-0.20.2-cdh3u6//h
 
     now lets run the command, look for string 'dfs'
 
-        $ hadoop jar /home/vagrant/hadoop-0.20.2-cdh3u6//hadoop-examples-0.20.2-cdh3u6.jar grep  <your_name>/grep/in   <your_name>/grep/out   'dfs'
+        $ hadoop jar /home/vagrant/hadoop-0.20.2-cdh3u6//hadoop-examples-0.20.2-cdh3u6.jar grep  in  out  'dfs'
 
     This commnad will kick off mapreduce jobs
 
@@ -46,7 +46,7 @@ On  Cloudack cluster , this jar file is in /home/vagrant/hadoop-0.20.2-cdh3u6//h
     grep output will be in the output dir (<your_name>/grep/out)
     see files in the output dir
 
-        $ hdfs dfs -ls <your_name>/grep/out
+        $ hdfs dfs -ls in
 
     use 'cat' command to see the file contents
 
