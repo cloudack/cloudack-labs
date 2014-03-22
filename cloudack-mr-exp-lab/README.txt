@@ -50,7 +50,7 @@ On  Cloudack cluster , this jar file is in /home/vagrant/hadoop-0.20.2-cdh3u6//h
 
     use 'cat' command to see the file contents
 
-        $ hadoop dfs -cat <your_name>/grep/out/part-00000
+        $ hadoop dfs -cat out/part*
 
 
 == BONUS LAB )
