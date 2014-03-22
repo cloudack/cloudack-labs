@@ -20,10 +20,10 @@ On  Cloudack cluster , this jar file is in /home/vagrant/hadoop-0.20.2-cdh3u6//h
     lets copy some files into hdfs, we will use Hadoop config files
 
     prepare a directory in hdfs
-        $ hdfs dfs -mkdir <your_name>/grep/in
+        $ hadoop dfs -mkdir <your_name>/grep/in
 
     copy hadoop config files from /etc/hadoop/conf  into HDFS
-        $ hdfs dfs -put /etc/hadoop/conf/*   <your_name>/grep/in
+        $ hadoop dfs -put /etc/hadoop/conf/*   <your_name>/grep/in
 
 
 == STEP 4) running grep
@@ -50,12 +50,13 @@ On  Cloudack cluster , this jar file is in /home/vagrant/hadoop-0.20.2-cdh3u6//h
 
     use 'cat' command to see the file contents
 
-        $ hdfs dfs -cat <your_name>/grep/out/part-00000
+        $ hadoop dfs -cat <your_name>/grep/out/part-00000
 
 
 == BONUS LAB )
     lets do a unix grep on the files
         $   grep -c 'dfs'   /etc/hadoop/conf/*
+        $   hadoop jar /home/vagrant/hadoop-0.20.2-cdh3u6//hadoop-examples-0.20.2-cdh3u6.jar wordcount data1 wcoutput
 
     note the count
     what is the count from Hadoop grep
